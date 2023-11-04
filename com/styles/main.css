@@ -4,6 +4,10 @@
 p {
   margin: 0;
 }
+nav {
+  background: inherit;
+  z-index: 9999999999999999999;
+}
 a.navbar-brand {
   font-family: fantasy;
   letter-spacing: 2px;
@@ -72,17 +76,36 @@ a.border .inner {
 .bg-light a.border .inner {
   background: #ffffff;
 }
-.cards {
-  display: grid;
-  grid-template-columns: repeat(10, minmax(250px, 1fr));
-  gap: 10px;
-  width: 100%;
-  overflow: scroll;
+@import url("https://fonts.googleapis.com/css?family=Poppins: wght@300; 400; 500; 600&display=swap");
+.cards,
+.cards * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
-.cards {
-  display: grid;
-  grid-template-columns: repeat(10, minmax(250px, 1fr));
-  gap: 10px;
-  width: 100%;
-  overflow: scroll;
+.img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    height: 50%;
+    border-radius: 10px;
+}
+.card {
+    height: 300px;
+    width: 300px;
+    border-radius: 10px;
+    overflow: hidden;
+    background: #cbcbcb;
+}
+.card .img img {
+  max-width: 100%;
+}
+.card .text {
+  text-align: center;
+}
+.card .text h4{
+  margin-top: 32px;
+  padding: 20px;
 }
